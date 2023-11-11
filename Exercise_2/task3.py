@@ -8,6 +8,7 @@ list_5 = [1, 2]
 # Write your code here:
 def pair_up(list):
     return [] if len(list) < 2 else [(list[0], list[1])] + pair_up(list[2:])
+    # return list(zip(l[::2], l[1::2]))
 
 assert pair_up(list_1) == [(1, 2), (3, 4), (5, 6)]
 assert pair_up(list_2) == [(1, 2), (3, 4)]  # We ignore the last element, if we cannot pair it up
